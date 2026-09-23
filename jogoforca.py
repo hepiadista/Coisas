@@ -1,6 +1,6 @@
 import random
 import sys
-tema = ('casa', 'mesa', 'mato', 'quadro', 'rampa', 'arvore', 'bola', 'carro', 'dama', 'estado', 'faca', 'gaiola', 'homem', 'imperio', 'jaula', 'kiwi', 'lapis', 'mulher', 'navio', 'osmose', 'padaria', 'queijo', 'ratoeira', 'sabonete', 'trovoada', 'uva', 'vitoria', 'xadrez', 'zoologico', 'amor', 'brasil', 'camelo', 'desejo', 'escola', 'futebol', 'grilo', 'hotel', 'igreja', 'janeiro', 'luva', 'madeira', 'novela', 'ovario', 'patinete', 'quilometro', 'rato', 'sistema', 'trabalho', 'universo', 'verme', 'xerox')
+tema = ('arrependimento', 'brutalidade', 'carpinteiro', 'dinamarca', 'encanador', 'fertilidade', 'ganancioso', 'computador', 'dispositivo', 'empreendedor', 'fidelidade', 'generosidade', 'humanidade', 'intimidade', 'juventude', 'kiwi', 'longevidade', 'mediocridade', 'necessidade', 'oportunidade', 'procrastinar', 'quantidade', 'relacionamento', 'superficial', 'tecnologia', 'uniforme', 'vagalume', 'xadrez', 'zoologico', 'ambicioso', 'bochecha', 'complexo', 'dicionario', 'extrovertido', 'felicidade', 'gentileza', 'habilidade', 'importante', 'julgamento', 'linguagem', 'maturidade', 'nacionalidade', 'organismo', 'perspectiva', 'quilometro', 'responsabilidade', 'superestimado', 'transparente', 'universidade', 'vulnerabilidade', 'xenofobia')
 tema_escolhido = []
 tema_escondido = []
 boneco = {'cabeça': ' ', 'tronco1': ' ', 'tronco2': ' ', 'braço_direito': ' ', 'braço_esquerdo': ' ', 'perna_direita': ' ', 'perna_esquerda': ' '}
@@ -70,7 +70,7 @@ add_tema()
 add_hifen()
 while True:		
 	add_boneco()	
-	print(*tema_escondido,'          ', *tentativas_erradas)
+	print(*tema_escondido)
 	letra = input('Digite uma letra: ').strip().lower()
 	add_letra()
 		
@@ -79,12 +79,12 @@ while True:
 		
 	if len(tentativas_erradas) == 7:
 		add_boneco()
-		print(*tema_escolhido,'          ', *tentativas_erradas)
+		print(*tema_escolhido)
 		print('\033[1;31mVocê perdeu!\033[0m')
 		resetar_jogo()
 			
 	if tema_escondido.count('-') == 0:
 		add_boneco()
-		print(*tema_escondido, '          ', *tentativas_erradas)
+		print(*tema_escondido)
 		print('\033[1;32mParabéns, você acertou!\033[0m')
 		resetar_jogo()
