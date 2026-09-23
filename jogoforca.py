@@ -1,6 +1,6 @@
 import random
 import sys
-tema = ('arrependimento', 'brutalidade', 'carpinteiro', 'dinamarca', 'encanador', 'fertilidade', 'ganancioso', 'computador', 'dispositivo', 'empreendedor', 'fidelidade', 'generosidade', 'humanidade', 'intimidade', 'juventude', 'kiwi', 'longevidade', 'mediocridade', 'necessidade', 'oportunidade', 'procrastinar', 'quantidade', 'relacionamento', 'superficial', 'tecnologia', 'uniforme', 'vagalume', 'xadrez', 'zoologico', 'ambicioso', 'bochecha', 'complexo', 'dicionario', 'extrovertido', 'felicidade', 'gentileza', 'habilidade', 'importante', 'julgamento', 'linguagem', 'maturidade', 'nacionalidade', 'organismo', 'perspectiva', 'quilometro', 'responsabilidade', 'superestimado', 'transparente', 'universidade', 'vulnerabilidade', 'xenofobia')
+temas = ('arrependimento', 'brutalidade', 'carpinteiro', 'dinamarca', 'encanador', 'fertilidade', 'ganancioso', 'computador', 'dispositivo', 'empreendedor', 'fidelidade', 'generosidade', 'humanidade', 'intimidade', 'juventude', 'kiwi', 'longevidade', 'mediocridade', 'necessidade', 'oportunidade', 'procrastinar', 'quantidade', 'relacionamento', 'superficial', 'tecnologia', 'uniforme', 'vascularizado', 'xadrez', 'zoologico', 'ambicioso', 'bochecha', 'complexo', 'dicionario', 'extrovertido', 'felicidade', 'gentileza', 'habilidade', 'importante', 'julgamento', 'linguagem', 'maturidade', 'nacionalidade', 'organismo', 'perspectiva', 'quilometro', 'responsabilidade', 'superestimado', 'transparente', 'universidade', 'vulnerabilidade', 'xenofobia', 'aposentado', 'bibliografia', 'caracteristica', 'desenvolvimento', 'exponencial', 'fragmentado', 'guardanapo', 'hereditario', 'independente', 'jabuticaba', 'lubrificante', 'meteorologia', 'neurotransmissor')
 tema_escolhido = []
 tema_escondido = []
 boneco = {'cabeça': ' ', 'tronco1': ' ', 'tronco2': ' ', 'braço_direito': ' ', 'braço_esquerdo': ' ', 'perna_direita': ' ', 'perna_esquerda': ' '}
@@ -8,8 +8,7 @@ tentativas_erradas = []
 
 def jogar_novamente():
 	while True:
-		print('''[1] - Jogar Novamente.
-[2] - Sair. ''')
+		print('[1] - Jogar Novamente.\n[2] - Sair. ')
 		opcao = int(input('-: '))
 		if opcao == 1:
 			break
@@ -29,7 +28,7 @@ def add_letra():
 
 def add_tema():
 	rand = random.randint(0, len(tema) - 1)
-	for palavra in tema[rand]:
+	for palavra in temas[rand]:
 		tema_escolhido.append(palavra)
 				
 def add_boneco():
